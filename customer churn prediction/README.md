@@ -120,7 +120,8 @@ Key Observation:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
-python churn_analysis.py
+python churn analysis lr.py
+python churn analysis rfc.py
 ```
 
 ---
