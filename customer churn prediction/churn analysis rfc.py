@@ -72,5 +72,5 @@ model.fit(x_train, y_train)
 y_pred = model.predict(x_test)
 
 print("Accuracy:", accuracy_score(y_test, y_pred))
-print(confusion_matrix(y_test, y_pred))
-print(classification_report(y_test, y_pred))
+print("Confusion Matrix:\n",confusion_matrix(y_test, y_pred))
+print("Classification Report:\n", classification_report(y_test, y_pred))
