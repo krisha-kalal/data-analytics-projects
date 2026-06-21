@@ -1,149 +1,151 @@
-# Retail Business Analysis using Python and Oracle SQL
+# 🏪 Retail Business Analysis (Python + Oracle SQL)
 
-## Project Overview
+## 📌 Overview
 
-This project analyzes retail sales data from a Superstore dataset containing nearly 10,000 transactions. The goal is to identify business insights related to sales performance, profitability, customer behavior, regional trends, product categories, and discount impact.
-
-The project combines Python for data analysis and visualization with Oracle SQL for business query analysis.
+This project focuses on analyzing retail sales and profit data to uncover business insights using Python and Oracle SQL. The analysis helps identify top-performing categories, regions, customers, and products while understanding the impact of discounts on profitability.
 
 ---
 
-## Tools and Technologies
+## 🎯 Objectives
 
-- Python
-- Pandas
-- Matplotlib
-- Jupyter Notebook
-- Oracle SQL
-- Oracle SQL Developer
-
----
-
-## Dataset Information
-
-- Dataset: Superstore Sales Dataset
-- Total Records: 9,994
-- Features: 21 Columns
-- Data Type: Retail Sales Transactions
-
-Key columns include:
-
-- Order Date
-- Customer Name
-- Category
-- Sub-Category
-- Region
-- Sales
-- Profit
-- Discount
-- Quantity
+* Clean and preprocess retail sales data
+* Perform exploratory data analysis (EDA)
+* Analyze sales and profit trends
+* Execute SQL queries for business insights
+* Visualize key business metrics
+* Generate actionable recommendations
 
 ---
 
-## Data Preparation
+## 📂 Dataset
+
+**Sample Superstore Dataset**
+
+Contains:
+
+* Customer information
+* Product details
+* Sales transactions
+* Profit data
+* Regional information
+* Discounts and quantities
+
+---
+
+## 🧹 Data Preprocessing
+
+* Loaded dataset using Pandas
+* Handled encoding issues during import
+* Checked for missing values
+* Verified data types
+* Converted date columns to datetime format
+* Created additional Year and Month columns
+* Cleaned column names for Oracle SQL compatibility
+
+---
+
+## 📊 Exploratory Data Analysis (EDA)
+
+The following visualizations were created:
+
+### 1. Sales by Category
+
+Compares revenue generated across product categories.
+
+### 2. Profit by Category
+
+Identifies the most profitable product categories.
+
+### 3. Sales by Region
+
+Shows revenue distribution across regions.
+
+### 4. Profit by Region
+
+Highlights regional profitability performance.
+
+### 5. Monthly Sales Trend
+
+Analyzes sales performance over time.
+
+### 6. Discount vs Average Profit
+
+Examines how discounts affect profitability.
+
+---
+
+## 🗄️ SQL Analysis
+
+The following business queries were executed using Oracle SQL:
+
+- 1. Total Number of Records
+```sql
+SELECT COUNT(*) FROM SUPERSTORE;
+```
+- 2. Total Sales
+```sql
+SELECT SUM(SALES) FROM SUPERSTORE;
+```
+- 3. Total Profit
+```sql
+SELECT SUM(PROFIT) FROM SUPERSTORE;
+```
+- 4. Sales by Category
+- 5. Profit by Category
+- 6. Sales by Region
+- 7. Profit by Region
+- 8. Top 10 Customers by Sales
+- 9. Top 10 Products by Profit
+- 10. Monthly Sales Trend
+- 11. Discount Impact on Profit
+
+---
+
+## 🔍 Key Insights
+
+* Technology generated the highest sales revenue.
+* Technology was also the most profitable category.
+* The West region recorded the highest sales and profit.
+* Furniture generated high sales but comparatively lower profit.
+* Heavy discounts often resulted in negative profits.
+* A small group of customers contributed significantly to overall sales.
+* Certain products consistently generated higher profits than others.
+* Sales fluctuated across months, indicating seasonal purchasing patterns.
+
+---
+
+## 💡 Business Recommendations
+
+* Increase focus on high-performing Technology products.
+* Review discount strategies to prevent profit loss.
+* Expand successful sales strategies used in the West region.
+* Promote high-profit products more aggressively.
+* Monitor low-profit categories and optimize pricing strategies.
+* Use customer purchasing behavior to improve targeted marketing.
+
+---
+
+## 🛠️ Technologies Used
 
 ### Python
 
-- Loaded dataset using Pandas
-- Handled encoding issues
-- Converted date columns into datetime format
-- Created Year and Month features
-- Renamed columns for Oracle SQL compatibility
-- Exported cleaned dataset for database import
+* Pandas
+* NumPy
+* Matplotlib
 
-### Oracle SQL
+### Database
 
-- Imported cleaned dataset into Oracle Database
-- Performed business analysis using SQL queries
+* Oracle SQL Developer
+* Oracle XE
 
----
+### Development Environment
 
-## SQL Analysis Performed
-
-### Total Records
-### Total Sales
-### Total Profit
-### Category-wise Sales
-### Category-wise Profit
-### Region-wise Sales
-### Region-wise Profit
-### Top 10 Customers by Sales
-### Top 10 Products by Profit
-### Monthly Sales Trend
-### Discount Impact on Profit
-### Discounts Resulting in Losses
+* Jupyter Notebook
+* Visual Studio Code
 
 ---
 
-## Key Findings
-
-### Overall Business Performance
-
-- Total Sales: $2.29 Million
-- Total Profit: $286,397
-
-### Category Performance
-
-- Technology generated the highest sales.
-- Technology also produced the highest profit.
-- Furniture generated high sales but relatively low profit.
-
-### Regional Performance
-
-- West region recorded the highest sales.
-- West region also generated the highest profit.
-
-### Customer Insights
-
-- A small group of customers contributed significantly to total revenue.
-- Identifying top customers can help improve retention strategies.
-
-### Product Insights
-
-- Several products generated exceptionally high profits.
-- Product profitability varies significantly across categories.
-
-### Discount Analysis
-
-- Discounts between 0% and 20% remained profitable on average.
-- Discounts above 30% frequently resulted in negative profits.
-- Excessive discounting reduced business profitability.
-
----
-
-## Visualizations Created
-
-### Sales by Category
-- Bar Chart
-
-### Profit by Category
-- Bar Chart
-
-### Sales by Region
-- Bar Chart
-
-### Profit by Region
-- Bar Chart
-
-### Monthly Sales Trend
-- Line Chart
-
-### Discount vs Average Profit
-- Line Chart
-
----
-
-## Business Recommendations
-
-- Focus on Technology products for revenue growth.
-- Review Furniture pricing and cost strategies.
-- Prioritize West region expansion opportunities.
-- Reduce excessive discount campaigns.
-- Develop loyalty programs for top customers.
-
----
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
 retail_business_analysis/
@@ -154,11 +156,33 @@ retail_business_analysis/
 ├── retail_analysis.ipynb
 ├── sql_queries.sql
 ├── superstore_clean.csv
-└── README.md 
+└── README.md
 ```
 
 ---
 
-## Author
+## 🚀 How to Run
 
-Krisha Kalal
+### Install Dependencies
+
+```bash
+pip install pandas numpy matplotlib
+```
+
+### Run Notebook
+
+```bash
+jupyter notebook retail_analysis.ipynb
+```
+
+### Run SQL Queries
+
+1. Open Oracle SQL Developer
+2. Import `superstore_clean.csv`
+3. Execute queries from `sql_queries.sql`
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how Python and Oracle SQL can be combined to analyze retail business performance. Through data cleaning, visualization, and SQL-based analysis, meaningful insights were generated to support better business decisions related to sales, profitability, customer behavior, and discount strategies.
